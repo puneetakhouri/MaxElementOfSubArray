@@ -45,8 +45,8 @@ func FindMaxOptimized(arr []int, windowSize int) []int {
 			leftArr[i] = arr[i]
 		} else {
 			var val int
-			if arr[i-1] > arr[i] {
-				val = arr[i-1]
+			if leftArr[i-1] > arr[i] {
+				val = leftArr[i-1]
 			} else {
 				val = arr[i]
 			}
@@ -62,8 +62,8 @@ func FindMaxOptimized(arr []int, windowSize int) []int {
 			rightArr[i] = arr[i]
 		} else {
 			var val int
-			if arr[i+1] > arr[i] {
-				val = arr[i+1]
+			if rightArr[i+1] > arr[i] {
+				val = rightArr[i+1]
 			} else {
 				val = arr[i]
 			}
